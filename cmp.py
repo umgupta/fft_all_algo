@@ -2,6 +2,7 @@
 
 import sys
 import math
+tol=2
 
 if len(sys.argv)!=3:
 	print "USAGE: ./cmp.py file1 file2"
@@ -32,7 +33,7 @@ while j<i:
 	n_ar=line2[j].split("\t")
 	j+=1	
 		
-	if(abs(int(m_ar[0])-int(n_ar[0]))>2 or abs(int(m_ar[1])-int(n_ar[1]))>2):
+	if(abs(int(m_ar[0])-int(n_ar[0]))>tol or abs(int(m_ar[1])-int(n_ar[1]))>tol):
 		print "fails at line: " +str(j)
 		print "diff:-"+str(max((abs(int(m_ar[0])-int(n_ar[0]))),abs(int(m_ar[1])-int(n_ar[1]))))
 		fail.append(max((abs(int(m_ar[0])-int(n_ar[0]))),abs(int(m_ar[1])-int(n_ar[1]))))
