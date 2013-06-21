@@ -1,0 +1,71 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then	
+	echo "USAGE: ./build <clean/gst/kiss_fixed16/kiss_fixed32/kiss_float/allgo/all>"
+	exit 0
+fi
+
+if [ "$1" == "clean" ]
+then
+	cmake . -DALGO=KISS_FFT -DOP=FIXED32	
+	make clean
+	cmake . -DALGO=KISS_FFT -DOP=FLOAT
+    make clean
+	cmake . -DALGO=KISS_FFT -DOP=FIXED16
+    make clean
+	cmake . -DALGO=GST_FFT
+	make clean
+	cmake . -DALGO=ALLGO_FFT
+	make clean
+    exit 0
+fi
+
+if [ "$1" == "kiss_fixed32" ]
+then
+	cmake . -DALGO=KISS_FFT -DOP=FIXED32
+	make
+    exit 0
+fi
+
+if [ "$1" == "kiss_fixed16" ]
+then
+    cmake . -DALGO=KISS_FFT -DOP=FIXED16
+    make
+    exit 0
+fi
+
+
+if [ "$1" == "kiss_float" ]
+then
+    cmake . -DALGO=KISS_FFT -DOP=FLOAT
+    make
+	exit 0
+fi
+
+if [ "$1" == "gst" ]
+then	
+	cmake . -DALGO=GST_FFT -DOP=FIXED32
+	make
+	exit 0
+fi
+
+if [ "$1" == "allgo" ]
+then 
+	cmake . -DALGO=ALLGO_FFT -DOP=FIXED32
+	make
+	exit 0
+fi
+
+if [ "$1" == "all" ]
+then
+	make clean
+	./build kiss_float
+	./build kiss_fixed32
+	./build kiss_fixed16
+	./build gst
+	./build allgo
+	exit 0
+fi
+
+echo "USAGE: ./build <clean/gst/kiss_fixed16/kiss_fixed32/kiss_float/allgo/all>"

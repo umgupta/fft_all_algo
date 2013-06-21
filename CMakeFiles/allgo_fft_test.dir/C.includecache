@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/umang/workspace/fft/fft_all_algo/fft_compare.c
+stdio.h
+-
+stdlib.h
+-
+wav_read.h
+/home/umang/workspace/fft/fft_all_algo/wav_read.h
+arm_neon.h
+-
+sys/time.h
+-
+kiss_fftr.h
+/home/umang/workspace/fft/fft_all_algo/kiss_fftr.h
+fft_interface.h
+-
+gst/fft/gstffts16.h
+-
+
+thirdparty_lib/fft_interface.h
+
+wav_io/wav_read.h
+config.h
+wav_io/config.h
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+inttypes.h
+-
+stdint.h
+-
+

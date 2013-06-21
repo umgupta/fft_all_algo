@@ -1,0 +1,1 @@
+arm-none-linux-gnueabi-gcc      CMakeFiles/gst_fft_test.dir/fft_compare.c.o  -o gst_fft_test -rdynamic -L/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib libafpwavio.a -lm -lgstfft-0.10 -Wl,-rpath,/home/umang/ti-ezsdk_dm816x-evm_5_05_02_00/linux-devkit/arm-none-linux-gnueabi/usr/lib 

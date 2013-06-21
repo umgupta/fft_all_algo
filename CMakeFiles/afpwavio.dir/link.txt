@@ -1,0 +1,2 @@
+/usr/bin/ar cr libafpwavio.a  CMakeFiles/afpwavio.dir/wav_io/wav_read.c.o CMakeFiles/afpwavio.dir/wav_io/wav_write.c.o
+/usr/bin/ranlib libafpwavio.a

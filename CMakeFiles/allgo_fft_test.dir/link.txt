@@ -1,0 +1,1 @@
+arm-none-linux-gnueabi-gcc      CMakeFiles/allgo_fft_test.dir/fft_compare.c.o  -o allgo_fft_test -rdynamic -L/home/umang/workspace/fft/fft_all_algo/thirdparty_lib/arm9 libafpwavio.a -lfft_lib_arm9e -lm -Wl,-rpath,/home/umang/workspace/fft/fft_all_algo/thirdparty_lib/arm9 
